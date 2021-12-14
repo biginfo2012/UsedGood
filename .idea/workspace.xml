@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42159d4e-0c6d-40dc-9e21-5631bec0d42d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1uFdteoD3Yqz2QeGs0pIUCFy7Yx" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/js" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\current\boilerapp\putai-user\src\js" />
+      <recent name="F:\current\boilerapp\putai-user\src" />
+      <recent name="F:\current\boilerapp\putai-user" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42159d4e-0c6d-40dc-9e21-5631bec0d42d" name="Default Changelist" comment="" />
+      <created>1624265486257</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624265486257</updated>
+      <workItem from="1624265487557" duration="783000" />
+      <workItem from="1624300398935" duration="8305000" />
+      <workItem from="1624442218384" duration="4026000" />
+      <workItem from="1624620190053" duration="4326000" />
+      <workItem from="1624654437053" duration="2759000" />
+      <workItem from="1624869389328" duration="13180000" />
+      <workItem from="1624939260818" duration="19329000" />
+      <workItem from="1625030013372" duration="1849000" />
+      <workItem from="1625053782298" duration="13000" />
+      <workItem from="1625074407996" duration="29506000" />
+      <workItem from="1625195817152" duration="2382000" />
+      <workItem from="1625349454594" duration="8395000" />
+      <workItem from="1625507504779" duration="13539000" />
+      <workItem from="1625693394187" duration="3035000" />
+      <workItem from="1625717248276" duration="3500000" />
+      <workItem from="1625768367955" duration="21320000" />
+      <workItem from="1625946672860" duration="20001000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
