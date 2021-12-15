@@ -15,8 +15,8 @@ export const requestSend = (url,params,method = constants.METHOD_POST,multipart 
                 if(resp.status === constants.RES_ERROR) {
                     if(resp.msg === constants.ERR_TOKEN_EXPIRED || resp.msg === constants.ERR_INVALID_TOKEN) {
                         //alert('token error')
-                       // localStorage.removeItem('token')
-                        router.push('/login')
+                        // localStorage.removeItem('token')
+                        //router.push('/login')
                         reject(resp)
                     }
 
@@ -44,7 +44,7 @@ export const validCheck = (params,rules) =>{
             errorMsg = locale.wrong_email_format
         else if(val.includes('phone') && !validPhone(value))
             errorMsg = locale.wrong_mobile_format
-        else if(val.includes('password') && value.length < 6)
+        else if(val.includes('password') && value.length < 8)
             errorMsg = locale.password_length_bigger_six
         else if(val.includes('verifyCode') && value.length !== 6)
             errorMsg = locale.verify_code_length_6
@@ -102,7 +102,7 @@ export const deviceReady = () => {
             let camera = navigator.camera;
             camera.getPicture ((img) =>{
                 img = 'data:image/jpeg;base64,' + img;
-               // let blob = b64toBlob(img,'image/jpeg');
+                // let blob = b64toBlob(img,'image/jpeg');
                 resolve({status:true,data:img})
             }, (msg) =>{
                 resolve({status:false,result:msg})
@@ -119,7 +119,7 @@ export const checkPermission = () => {
             var permissions = cordova.plugins.permissions;
             permissions.hasPermission(permissions.READ_EXTERNAL_STORAGE, function (status) {
                 if (status.hasPermission) {
-                   resolve(true);
+                    resolve(true);
                 } else {
                     // Request the permission to read files from external storage.
                     permissions.requestPermission(permissions.READ_EXTERNAL_STORAGE, () =>{
@@ -260,7 +260,7 @@ export  const imageToBlob = (image, sliceSize = null)=> {
 }
 
 export const initialize = () => {
-   document.addEventListener('deviceready', () => {
+    document.addEventListener('deviceready', () => {
         /*document.addEventListener("backbutton", function (e) {
            e.preventDefault();
         }, false); // return key*/
@@ -311,7 +311,7 @@ export const GetFileObjectFromURL = function(filePathOrUrl) {
                 resolve(r1);
             })
 
-           // convertBlob(blobToFile(blob, 'testFile.mp4'));
+            // convertBlob(blobToFile(blob, 'testFile.mp4'));
         });
     });
 

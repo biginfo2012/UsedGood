@@ -78,23 +78,24 @@
                     return;
                 }
                 this.loading = true;
+                router.push('/home')
                 //todo checking validation
-                axios.post(config.API_URL + 'login/user', this.params).then((resp) => {
-                    resp = resp.data
-                    this.loading = false
-                    if (resp.status === constants.RES_SUCCESS) {
-                        const token = resp.token;
-                        const me = JSON.stringify(resp.result);
-                        localStorage.setItem('token', token)
-                        localStorage.setItem('me', me);
-                        router.push('/')
-                    } else {
-                        this.$ons.notification.alert(locale.login_failed,{title:locale.alert_title,buttonLabel:locale.alert_ok});
-                    }
-                }).catch(((error, resp) => {
-                    this.$ons.notification.alert(locale.login_failed,{title:locale.alert_title,buttonLabel:locale.alert_ok});
-                    this.loading = false
-                }))
+                // axios.post(config.API_URL + 'login/user', this.params).then((resp) => {
+                //     resp = resp.data
+                //     this.loading = false
+                //     if (resp.status === constants.RES_SUCCESS) {
+                //         const token = resp.token;
+                //         const me = JSON.stringify(resp.result);
+                //         localStorage.setItem('token', token)
+                //         localStorage.setItem('me', me);
+                //         router.push('/')
+                //     } else {
+                //         this.$ons.notification.alert(locale.login_failed,{title:locale.alert_title,buttonLabel:locale.alert_ok});
+                //     }
+                // }).catch(((error, resp) => {
+                //     this.$ons.notification.alert(locale.login_failed,{title:locale.alert_title,buttonLabel:locale.alert_ok});
+                //     this.loading = false
+                // }))
             },
         }
     }

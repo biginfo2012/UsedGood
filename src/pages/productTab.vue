@@ -4,14 +4,14 @@
       <div class="product-item" v-for="product in products">
         <router-link :to="{path: '/product-detail/' + product.id}">
           <div class="img">
-            <img :src="product.main_photo" />
+            <img src="../assets/logo/logo.png" />
           </div>
           <div class="cont flex-grow-1 d-flex flex-column">
-            <label class="title flex-grow-1">{{product.name  | truncate(70, '...')}}</label>
+            <label class="title flex-grow-1">상품명</label>
             <div>
-              <span class="category">#{{product.category.name}}</span><br>
-              <span class="currency text-danger">&yen;</span> <span class="amount">{{ product.items[0].price | currency}}</span>
-              <span v-if="product.items.length > 1 && product.items[product.items.length - 1].price !== product.items[0].price " class="currency text-danger"> ~ &yen;</span> <span class="amount">{{ product.items[product.items.length - 1].price | currency}}</span>
+              <span class="category">#카테고리</span><br>
+              <span class="currency text-danger">&yen;</span> <span class="amount">{{ 1000 | currency}}</span>
+              <span class="currency text-danger"> ~ &yen;</span> <span class="amount">{{ 300 | currency}}</span>
             </div>
           </div>
         </router-link>
@@ -31,19 +31,23 @@
       return {
         loading:false,
         page:0,
-        products:[],
-        totalCount:0
+        products:[
+          {id: 1},
+          {id: 2},
+          {id: 3}
+        ],
+        totalCount:3
       }
     },
     methods:{
       getList() {
-        this.loading = true
-        requestSend(config.API_URL+'product/filter',{page:this.page,length:8}).then((resp =>{
-          if(resp.status === constants.RES_SUCCESS) {
-            self.products = resp.items;
-            self.totalCount = resp.total
-          }
-        }))
+        //this.loading = true
+        // requestSend(config.API_URL+'product/filter',{page:this.page,length:8}).then((resp =>{
+        //   if(resp.status === constants.RES_SUCCESS) {
+        //     self.products = resp.items;
+        //     self.totalCount = resp.total
+        //   }
+        // }))
       },
 
     },

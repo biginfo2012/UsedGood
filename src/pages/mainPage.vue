@@ -26,7 +26,7 @@
 <script>
     import locale from "@/js/locale";
     import product from "@/pages/productTab";
-    import home from "@/pages/homeTab";
+    import home from "@/pages/productTab";
     import notification from "@/pages/notificationTab";
     import my from "@/pages/myTab";
     import router from "@/router";
@@ -35,9 +35,9 @@
     export default {
         components: {home,product ,notification, my},
         props:{
-          tabIndex:{
-              default:0
-          }
+            tabIndex:{
+                default:0
+            }
         },
         data() {
             return {
@@ -50,16 +50,16 @@
                         icon: 'ion-home',
                         label: locale.home,
                         page: home,
-                        value: 'home',
-                    },
-                    {
-                        icon: 'ion-android-color-palette',
-                        label: locale.product,
-                        page: product,
                         value: 'product',
                     },
                     {
                         icon: 'ion-chatbox-working',
+                        label: locale.trand_news,
+                        page: product,
+                        value: 'notify',
+                    },
+                    {
+                        icon: 'ion-chatbubbles',
                         label: locale.notification,
                         badge: 0,
                         page: notification,
@@ -74,7 +74,7 @@
                 ],
                 paths:[
                     {
-                     value:'home',
+                        value:'home',
                         path:'/',
                     },
                     {
@@ -125,7 +125,7 @@
                 this.setActiveRoute()
             }
         },
-      
+
 
     }
 </script>

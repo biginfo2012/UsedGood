@@ -91,10 +91,10 @@
                 if (me !== null && me !== '')
                     this.myInfo = JSON.parse(me)
                 else
-                    router.push('/login')
+                    //router.push('/login')
                 if (this.myInfo.avatar === null)
                     this.myInfo.avatar = constants.ERR_SRC
-               // this.getCountInfo();
+                // this.getCountInfo();
             },
             getCountInfo() {
                 alert('this count info');

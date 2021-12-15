@@ -22,6 +22,11 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
+      component: loginPage,
+    },
+    {
+      path: '/home',
+      name: 'home-page',
       component: mainPage,
       meta:{
         auth:true,
@@ -129,7 +134,8 @@ router.beforeEach((to,from,next) => {
     // if not, redirect to login page.
     const token = localStorage.getItem('token');
     if (token === null) {
-      next({ name: 'Login' })
+      //next({ name: 'Login' })
+      next()
     } else {
       next() // go to wherever I'm going
     }

@@ -83,8 +83,8 @@
             if (me !== null && me !== '')
                 this.my = JSON.parse(me);
             else
-                router.push('/login');
-            this.getList();
+                //router.push('/login');
+                this.getList();
             self = this
             this.$socket.on('user-notify', data => {
                 if(data.user !== undefined && this.my.id === data.user){
